@@ -48,6 +48,7 @@ Esegui il seguente comando per installare automaticamente OpenCV, NumPy, ecc sul
 python -m venv .venv
 .venv\Scripts\activate
 python -m pip install --upgrade pip
+cd <NomeCartell>
 pip install -r requirements.txt
 ```
 
