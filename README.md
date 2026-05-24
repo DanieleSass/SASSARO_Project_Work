@@ -46,7 +46,7 @@ cd percorso/della/tua/cartella/il_tuo_progetto
 Esegui il seguente comando per installare automaticamente OpenCV, NumPy, ecc sul tuo sistema :
 ```bash
 python -m venv .venv
-v.env\Scripts\activate
+.venv\Scripts\activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
