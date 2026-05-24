@@ -4,6 +4,7 @@ import time #gestisce tipo fps ecc
 import effects  #altri file
 import filters
 import ui
+import os
 
 
 def main():
@@ -208,12 +209,22 @@ def main():
 
         #screen dopo applicazione del filtro
         if tasto == ord('s') or tasto == ord('S'):
+            cartella_output="outputImages"
+            #se la cartella non esiste la crea
+            if not os.path.exists(cartella_output):
+                os.makedirs(cartella_output)
             nome = f"outputImages/IMG_{datetime.datetime.now().strftime('%H%M%S')}.jpg"
             cv2.imwrite(nome, frame)
             timer_feedback_screen = 15  #mostra avviso che immagine è stata scattata
 
         #idem x screen
         if tasto == ord('r') or tasto == ord('R'):
+            cartella_video_output="outputVideos"
+
+            #se cartella non esiste crea
+            if not os.path.exists(cartella_video_output):
+                os.makedirs(cartella_video_output)
+
             if not in_registrazione:    #vuol dire che non stavo registrando e quindi voglio iniziare la registrazione
                 nome = f"outputVideos/VID_{datetime.datetime.now().strftime('%H%M%S')}.mp4"
                 fourcc = cv2.VideoWriter_fourcc(*'mp4v')    #parametro serve per renderlo più leggere e comprimerlo
