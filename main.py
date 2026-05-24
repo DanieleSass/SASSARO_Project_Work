@@ -239,7 +239,7 @@ def main():
                 video_writer = None #lo annulla per efficienza e controlli più sicuri sotto
                 in_registrazione = False    #e resetta stato di registrazione
 
-        # Rendering video registrato
+        
         if in_registrazione and video_writer:
             video_writer.write(frame)   #scrive effettivamente dentro al video il frame attuale
 
