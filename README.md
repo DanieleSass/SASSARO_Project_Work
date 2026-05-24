@@ -42,7 +42,7 @@ Usa il comando `cd` seguito dal percorso della cartella in cui hai salvato i fil
 ```bash
 cd percorso/della/tua/cartella/il_tuo_progetto
 ```
-### 4. Installa le librerie richieste
+### 4A. Installa le librerie richieste (Windows)
 Esegui il seguente comando per installare automaticamente OpenCV, NumPy, ecc sul tuo sistema :
 ```bash
 python -m venv .venv
@@ -51,6 +51,16 @@ python -m pip install --upgrade pip
 cd <NomeCartell>
 pip install -r requirements.txt
 ```
+
+### 4B. Installa le librerie richieste (Linux)
+Esegui il seguente comando per installare automaticamente OpenCV, NumPy, ecc sul tuo sistema :
+```bash
+cd <NomeCartella>
+chmod +x run.sh
+sudo apt update && sudo apt install -y python3-pip python3-venv libgl1-mesa-glx libglib2.0-0
+./run.sh
+```
+
 
 ### 5. Come avviare l'applicazione
 Una volta completata l'installazione, rimani nel terminale all'interno della cartella del progetto ed esegui il comando:
